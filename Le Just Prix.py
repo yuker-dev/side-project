@@ -1,13 +1,13 @@
 import random 
 
-# Variable
+# Variables
 number = random.randint(1, 100)
-num_essaie = 0 
-essaie = "None"
+num_try = 0 
+tryed = "None"
 
 
-print("Bienvenue sur le jeu : Le Juste Prix")
-print("Le but du jeu ? Essayez de deviner le nombre avec le moins d'essaie possible !")
+print("Welcome to the game : The Right Price !")
+print("The goal ? Try to guess the right price with less than a couples of tries. !")
 identification = input("Identification ? : ")
 
 if identification == "Bypass":
@@ -15,15 +15,15 @@ if identification == "Bypass":
 
 
 
-while essaie != number:
-    essaie = int(input("Quel est votre essaie ? : "))
-    num_essaie += 1
+while tryed != number:
+    essaie = int(input("What is the right price ? : "))
+    num_try += 1
 
-    if essaie > number:
-        print("Trop haut re-essaye")
+    if tryed > number:
+        print("Too big, retry !")
 
-    elif essaie < number:
-        print("Trop bas re-essaye")
+    elif tryed < number:
+        print("Too small, retry !")
 
-    elif essaie == number:
-        print(f"Bravo ! Tu as obtenue le juste prix en {num_essaie} essaies")
+    elif tryed == number:
+        print(f"Good job ! You've guessed the number in {num_try} tries")
